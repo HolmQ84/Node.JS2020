@@ -48,16 +48,19 @@ console.log(thisSong.about);
 
 // --------------------------------------
 
+// Intro to arrays...:
+
+// Declare an array with entries in it.
 const fruits = ["apple", "banana"];
 console.log(fruits);
 
+// Add another entry to the array.
 fruits.push("pear");
 console.log(fruits);
 
+// Remove the last entry.
 fruits.pop();
 console.log(fruits);
 
-fruits.pop();
-console.log(fruits);
-
+// Print out the [0] item from the list.
 console.log(fruits[0]);
