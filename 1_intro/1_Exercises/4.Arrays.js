@@ -78,11 +78,12 @@ const discardedNumbers = [];
 // else push them to the array discardedNumbers
 
 for (let i = 0;i<numbers.length;i++) {
-    if (numbers[i] < 0 || numbers[i] > 6) {
+    if (numbers[i] > 6 || numbers[i] < 0) {
         console.log(numbers[i]);
     } else {
         discardedNumbers.push(numbers[i]);
         numbers.splice(i, 1);
+        i--;
     }
 }
 
