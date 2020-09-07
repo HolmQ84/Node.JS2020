@@ -16,9 +16,9 @@ const friends = [];
 
 // What a lonely array. Add at least 3 friend objects to it.
 
-friends.push({boys: "Peter"});
-friends.push({girls: "Sandra"});
-friends.push({family: "Mom"});
+friends.push({boy: "Peter"});
+friends.push({girl: "Sandra"});
+friends.push({family: "Cousin"});
 console.log(friends);
 
 // --------------------------------------
@@ -62,7 +62,7 @@ console.log(dinnerTray);
 // --------------------------------------
 // Exercise 7 - For loop
 
-const moreLetters = ["a","b","c", "d", "e", "f", "g", "h"];
+const moreLetters = ["a","b","c","d","e","f","g","h"];
 
 // log every second char in the array starting from b
 
