@@ -30,6 +30,7 @@ const significantMathNumbers = [0, 2.718, 3.14159, 1729];
 // programmatically means that no finger counting allowed. There is a method for this (finding index based of value).
 
 console.log(significantMathNumbers.findIndex(index => index === 1729));
+console.log(significantMathNumbers.indexOf(1729));
 
 // --------------------------------------
 // Exercise 4 - Inserting elements
@@ -56,8 +57,9 @@ console.log(diet);
 
 // You really like your daily diet from last exercise. Copy it to a new array called dinnerTray so you can give it to a friend.
 
-dinnerTray = diet;
-console.log(dinnerTray);
+const dinnerTray2 = [...diet];
+console.log(diet);
+console.log(dinnerTray2);
 
 // --------------------------------------
 // Exercise 7 - For loop
@@ -68,6 +70,10 @@ const moreLetters = ["a","b","c","d","e","f","g","h"];
 
 console.log(moreLetters.filter((x, i) => i % 2));
 
+for (let i = 1;i < moreLetters.length; i += 2) {
+    console.log(moreLetters[i]);
+}
+
 // --------------------------------------
 // Exercise 8 - For loop and if statement
 
@@ -77,8 +83,8 @@ const discardedNumbers = [];
 // log the element if the number is above 6 or below 0
 // else push them to the array discardedNumbers
 
-for (let i = 0;i<numbers.length;i++) {
-    if (numbers[i] > 6 || numbers[i] < 0) {
+for (let i = 0;i < numbers.length;i++) {
+    if (numbers[i] < 0 || numbers[i] > 6) {
         console.log(numbers[i]);
     } else {
         discardedNumbers.push(numbers[i]);
