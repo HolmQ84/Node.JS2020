@@ -1,0 +1,8 @@
+{
+  "repository": "no",
+  "license": "MIT",
+  "description": "API tester.",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
