@@ -1,0 +1,8 @@
+HTTP                    METHOD                      WHAT IT DOES?
+----                    ------                      -------------
+
+GET                     /cars                       get all cars
+GET                     /car/id                     get car with ID
+POST                    /cars                       post a new car into cars
+PUT                     /cars/id                   update an entry point.
+DELETE                  /cars/id                   delete an entry point.
