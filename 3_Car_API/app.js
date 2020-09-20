@@ -27,13 +27,13 @@ app.get("/cars/:id", (req, res) => {
 
 app.post("/cars/:newcar", (req, res) => {
     res.send(
-        cars.push({id: cars.length, brand: req.params.newcar})
+        cars.push({id: cars.length, brand: req.params})
     );
 })
 
 app.put("/cars/:id/:newcar", (req, res) => {
     res.send(
-        cars[req.params.id].brand = req.params.newcar
+        cars[req.params.id].brand = req.params
     );
 })
 
