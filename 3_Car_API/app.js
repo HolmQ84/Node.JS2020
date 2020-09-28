@@ -1,5 +1,7 @@
-const express = require("express")
+const express = require("express");
 const app = express();
+
+const info = require("C:/Users/marti/IdeaProjects/3.Semester/Node.JS2020/3_Car_API/package.json");
 
 // Gør det muligt at returnere data i json format, på et post map - gennem en querystring.
 app.use(express.json());
@@ -7,43 +9,63 @@ app.use(express.json());
 app.use(express.urlencoded({extended: true}))
 
 let cars = [
-    {id: 0, brand: "BMW"},
-    {id: 1, brand: "Mitsubishi"},
-    {id: 2, brand: "Mercedes"},
-    {id: 3, brand: "Subaru"}
+    {id: 1, brand: "BMW"},
+    {id: 2, brand: "Mitsubishi"},
+    {id: 3, brand: "Mercedes"},
+    {id: 4, brand: "Subaru"}
 ];
 
+let currentCarId = 5;
+
 app.get("/", (req, res) => {
-    res.send("<div style='text-align: center'><br><br><h1>Welcome to the cardealer.</h1><br><button><a href='/cars'>See all cars</a></button></div>");
+    return res.send({info});
+})
+
+app.get("/welcome", (req, res) => {
+    return res.send("<div style='text-align: center'><br><br><h1>Welcome to the cardealer.</h1><br><button><a href='/cars'>See all cars</a></button></div>");
 })
 
 app.get("/cars", (req, res) => {
-    res.send({cars});
+    return res.send({cars});
 })
 
 app.get("/cars/:id", (req, res) => {
-    res.send({cars: cars[req.params.id]});
+    const car = cars.find(car => car.id === Number(req.params.id));
+    return res.send({data: car});
 })
 
-app.post("/cars/:newcar", (req, res) => {
-    res.send(
-        cars.push({id: cars.length, brand: req.params})
-    );
+app.post("/cars", (req, res) => {
+    const newCar = req.body;
+    newCar.id = currentCarId++;
+    cars.push(newCar);
+    return res.send({data: newCar});
 })
 
-app.put("/cars/:id/:newcar", (req, res) => {
-    res.send(
-        cars[req.params.id].brand = req.params
-    );
+app.patch("/cars/:id", (req,res) => {
+    cars = cars.map(car => {
+        if (car.id === Number(req.params.id)) {
+            return {...car, ...req.body , id: car.id};
+        }
+        return car;
+    });
+    return res.send({data: cars});
 })
 
 app.delete("/cars/:id", (req, res) => {
-    res.send(
-        cars.splice(req.params.id, 1)
-    );
+    cars = cars.filter(car => car.id !== Number(req.params.id));
+    return res.send({data: cars});
 })
 
-app.listen(8080, (error) => {
+// If PORT is defined then that should be the port otherwise fallback to port 80.
+// Environment variables
+console.log(process.env.PORT);
+// Unary expressions:
+const portNumber = process.env.PORT || 80;
+// Ternary expressions:
+// const portNumber = process.env.PORT ? process.env.PORT : 80;
+
+
+app.listen(portNumber, (error) => {
     if (error) {
         console.log("Error starting the server.");
     }
