@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="./teleport.css">
     <meta charset="UTF-8">
     <title>First jQuery Project</title>
 </head>
@@ -12,7 +13,27 @@
 <!-- #paragraph-2 -->
 <div id="paragraph-2"></div>
 
+<div class="teleport">
+    <tr>
+        <td><h1>Teleportation</h1></td>
+    </tr>
+    <tr>
+        <input type="text" placeholder="Put text here..." id="input1"></td>
+        <button id="teleport-btn">Teleport</button></th>
+        <input type="text" placeholder="Put more text here..." id="input2"></td>
+    </tr>
+</div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="./index.js"></script>
+<script>
+    $(() => {
+        $('#teleport-btn').click(() => {
+            console.log('Clicked!');
+            let swap = $('#input1').val();
+            $('#input1').val($('#input2').val());
+            $('#input2').val(swap);
+        })
+    })
+</script>
 </body>
 </html>
