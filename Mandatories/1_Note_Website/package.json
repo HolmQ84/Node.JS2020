@@ -1,0 +1,16 @@
+{
+  "repository": "no",
+  "license": "MIT",
+  "description": "1st Mandatory assignment in Node.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "cross-env": "^7.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  },
+  "scripts": {
+    "start-dev": "cross-env PORT=8086 nodemon app.js",
+    "start-prod": "cross-env PORT=80 node app.js"
+  }
+}

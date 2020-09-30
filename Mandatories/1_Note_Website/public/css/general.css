@@ -1,0 +1,60 @@
+body {
+    background-size: 100% 100%;
+    background-image: url('../images/background_image.jpg');
+    background-attachment: fixed;
+    font-family: Bahnschrift, serif;
+    text-align: center;
+}
+.main {
+    margin-left: 10%; /* Same as the width of the sidenav */
+    font-size: 28px; /* Increased text to enable scrolling */
+    padding: 0px 10px;
+}
+.sidenav {
+    border-right: 2px solid black;
+    height: 100%;
+    width: 10%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,97,26,1) 40%, rgba(0,97,26,1) 60%, rgba(0,0,0,1) 100%);
+    overflow-x: hidden;
+    padding-top: 20px;
+    opacity: 80%;
+}
+
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.textfield {
+    margin-left: 15%;
+    margin-right: 15%;
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 5px solid black;
+    border-radius: 20px;
+    color: white;
+}
+
+.textfield p {
+    margin-left: 2%;
+    margin-right: 2%;
+    text-align: left;
+    color: white;
+    font-size: 28px;
+}
+
+#separator {
+    margin-left: 5%;
+    margin-right: 5%;
+}
