@@ -3,8 +3,8 @@
   "license": "MIT",
   "description": "1st Mandatory assignment in Node.js",
   "dependencies": {
-    "express": "^4.17.1",
-    "cross-env": "^7.0.2"
+    "cross-env": "^7.0.2",
+    "express": "^4.17.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.4"

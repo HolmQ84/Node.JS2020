@@ -19,7 +19,7 @@ body {
     top: 0;
     left: 0;
     background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,97,26,1) 40%, rgba(0,97,26,1) 60%, rgba(0,0,0,1) 100%);
+    background: linear-gradient(90deg, black 0%, darkgreen 35%, darkgreen 65%, black 100%);
     overflow-x: hidden;
     padding-top: 20px;
     opacity: 80%;
@@ -28,13 +28,14 @@ body {
 .sidenav a {
     padding: 6px 8px 6px 16px;
     text-decoration: none;
-    font-size: 25px;
-    color: #818181;
+    font-size: 1.5em;
+    color: white;
+    font-weight: bold;
     display: block;
 }
 
 .sidenav a:hover {
-    color: #f1f1f1;
+    color: grey;
 }
 
 .textfield {
@@ -57,4 +58,10 @@ body {
 #separator {
     margin-left: 5%;
     margin-right: 5%;
+}
+
+li {
+    margin-left: 25%;
+    text-align: left;
+    font-size: 0.9em;
 }
