@@ -65,3 +65,7 @@ li {
     text-align: left;
     font-size: 0.9em;
 }
+
+html {
+    scroll-behavior: smooth;
+}
