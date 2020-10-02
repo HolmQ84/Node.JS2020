@@ -1,3 +1,6 @@
+
+/* Element Tags */
+
 body {
     background-size: 100% 100%;
     background-image: url('../images/background_image.jpg');
@@ -5,11 +8,35 @@ body {
     font-family: Bahnschrift, serif;
     text-align: center;
 }
+h1 {
+    font-size: 3em;
+}
+li {
+    font-size: 0.8em;
+    text-align: left;
+    margin-left: 40%;
+    line-height: 1.5em;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+/* Class tags */
+
 .main {
-    margin-left: 10%; /* Same as the width of the sidenav */
-    font-size: 28px; /* Increased text to enable scrolling */
-    padding: 0px 10px;
-    position: fixed;
+    margin-left: 10%;
+    font-size: 28px;
+    padding: 10px;
+}
+.pictures {
+    border: 3px solid black;
+    opacity: 70%;
+    border-radius: 20px;
+}
+.piclink {
+    font-size: 0.5em;
+    text-align: center;
+    color: grey;
 }
 .sidenav {
     border-right: 2px solid black;
@@ -25,7 +52,6 @@ body {
     padding-top: 20px;
     opacity: 80%;
 }
-
 .sidenav a {
     padding: 6px 8px 6px 16px;
     text-decoration: none;
@@ -34,11 +60,9 @@ body {
     font-weight: bold;
     display: block;
 }
-
 .sidenav a:hover {
-    color: grey;
+    color: limegreen;
 }
-
 .textfield {
     margin-left: 15%;
     margin-right: 15%;
@@ -47,7 +71,6 @@ body {
     border-radius: 20px;
     color: white;
 }
-
 .textfield p {
     margin-left: 4%;
     margin-right: 4%;
@@ -55,28 +78,28 @@ body {
     color: white;
     font-size: 20px;
 }
+.textfield a {
+    text-decoration: darkgreen;
+    color: greenyellow;
+}
+.textfield a:hover {
+    color: darkgreen;
+}
+.underlinks {
+    font-size: 0.7em;
+}
+.underlinks a {
+    color: yellowgreen;
+}
 
+/* ID Tags */
+
+#intro {
+    margin-top: 5%;
+    color: white;
+    text-shadow: 2px 2px #000000;
+}
 #separator {
     margin-left: 5%;
     margin-right: 5%;
-}
-
-li {
-    font-size: 0.9em;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-.pictures {
-    border: 3px solid black;
-    opacity: 70%;
-    border-radius: 20px;
-}
-
-.piclink {
-    font-size: 0.5em;
-    text-align: center;
-    color: grey;
 }
