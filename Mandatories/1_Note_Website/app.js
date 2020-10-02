@@ -22,6 +22,10 @@ app.get("/jQuery", (req, res) => {
     return res.sendFile(__dirname + '/html/jQuery.html');
 });
 
+app.get("/building", (req, res) => {
+    return res.sendFile(__dirname + '/html/building.html');
+});
+
 app.listen(8080, (error) => {
     if (error) {
         console.log("Error starting the server.");
