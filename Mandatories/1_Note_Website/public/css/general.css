@@ -9,6 +9,7 @@ body {
     margin-left: 10%; /* Same as the width of the sidenav */
     font-size: 28px; /* Increased text to enable scrolling */
     padding: 0px 10px;
+    position: fixed;
 }
 .sidenav {
     border-right: 2px solid black;
@@ -48,11 +49,11 @@ body {
 }
 
 .textfield p {
-    margin-left: 2%;
-    margin-right: 2%;
+    margin-left: 4%;
+    margin-right: 4%;
     text-align: left;
     color: white;
-    font-size: 28px;
+    font-size: 20px;
 }
 
 #separator {
@@ -61,11 +62,21 @@ body {
 }
 
 li {
-    margin-left: 25%;
-    text-align: left;
     font-size: 0.9em;
 }
 
 html {
     scroll-behavior: smooth;
+}
+
+.pictures {
+    border: 3px solid black;
+    opacity: 70%;
+    border-radius: 20px;
+}
+
+.piclink {
+    font-size: 0.5em;
+    text-align: center;
+    color: grey;
 }
