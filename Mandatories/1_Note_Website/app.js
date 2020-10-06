@@ -7,7 +7,7 @@ app.use(express.static(__dirname+ "/public/"));
 
 
 app.get("/", (req, res) => {
-    return res.sendFile(__dirname + '/html/index.html')
+    return res.sendFile(__dirname + '/html/upload.html')
 })
 
 app.get("/intro", (req, res) => {
