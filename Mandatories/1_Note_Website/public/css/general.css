@@ -103,3 +103,26 @@ html {
     margin-left: 5%;
     margin-right: 5%;
 }
+
+#listing {
+    font-size: 0.9em;
+    margin-left: -25%;
+}
+
+#listing li {
+    line-height: 200%;
+}
+
+.underlists {
+    font-size: 0.7em;
+    line-height: 150%;
+    margin-left: 5%;
+    color: lightgreen;
+}
+
+.images {
+    display: block;
+    margin-left: initial;
+    margin-right: initial;
+    border: 1px solid black;
+}

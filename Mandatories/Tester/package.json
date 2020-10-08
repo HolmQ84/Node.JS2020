@@ -1,0 +1,13 @@
+{
+  "name": "nodejs_intro",
+  "version": "0.0.1",
+  "description": "An website to introduce NodeJS to beginners.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "M.S. Holmqvist.",
+  "license": "MIT"
+}
+
+

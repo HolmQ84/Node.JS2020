@@ -17,8 +17,8 @@
     <a href="/gettingstarted">Oprettelse af projekt</a>
     <div class="underlinks">
         <a href="#link1">Udviklingsmiljø</a>
-        <a href="#link2">Node Package Manager</a>
         <a href="#link3">Dependencies</a>
+        <a href="#link4">Fremgangsmåde</a>
     </div>
     <a href="/building">Byg en hjemmeside</a>
     <a href="/jQuery">jQuery</a>
@@ -35,24 +35,109 @@
         <p>
             Her bliver der beskrevet præcis hvad man skal bruge for at starte et projekt op, og derefter komme igang med at bygge sin webapplikation.<br><br>
             Node JS tilbyder flere forskellige måder at gøre tingene på, men der vil her blive taget udgangspunkt i hovedsageligt én enkelt måde, hvorefter man selv kan undersøge og finde alternative måder at komme gennem oprettelsen af projektet.
+            <br><br>
+            Der vil i enkelte tilfælde blive beskrevet forskellige måder at opsætte forskellige ting på (fx oprettelse af package.json).
         </p>
         <h4 id="link1">Udviklingsmiljø</h4>
         <p>
-            I denne gennemgang af Node JS bruges IntelliJ som udviklingsmiljø
+            I denne gennemgang af Node JS bruges IntelliJ som integreret udviklingsmiljø (IDE). Det er dette miljø som vi hovedsageligt har arbejdet i gennem skoletiden, og derfor også oplagt at fortsætte med at benytte.
+            <br><br>
+            Her er links til IntelliJ og et par andre mulige IDE'er som kan bruges med Node.js:
+            <br>
         </p>
-        <h4 id="link2">Node Package Manager</h4>
+
+        <div style="margin-left: 7%">
+            <li><a href="https://visualstudio.microsoft.com/">Visual Studio</a></li>
+            <li><a href="https://www.eclipse.org/">Eclipse</a></li>
+            <li><a href="https://pypl.github.io/IDE.html">Andre IDE'er</a></li>
+        </div>
         <p>
-            Node Package Manager (NPM) bruges til at tilføje forskellige dependencies til ens projekt.
+            Det skal dog lige siges at der i denne gennemgang ikke vil være beskrevet hvordan de andre IDE'er skal konfigureres for at komme igang med projektet.
         </p>
         <h4 id="link3">Dependencies</h4>
         <p>
-            I et Node JS projekt kan man tilføje diverse dependencies som man ønsker at benytte gennem udviklingen af applikationen
+            Node Package Manager (NPM) bruges til at tilføje forskellige dependencies til éns projekt.
+            <br><br>
+            Node JS er nemlig et lightweight framework, hvor man selv skal installere de nødvendige dependencies. <br>Dette betyder også at projektets størrelse bliver så kompakt som muligt, da der ikke er alle mulige uønskede features som man muligvis ikke vil gøre brug af - og som derfor bare vil ligge og fylde unødvendigt.
+            <br><br>
+            Disse dependencies bliver allesammen tilføjet til en fil der kaldes 'package.json'. <br>
+            Det er også denne fil som skal oprettes som det første, når man opretter et NodeJS projekt. <br><br>
+            Den kan laves på to forskellige måder:
         </p>
+        <div style="margin-left: -5%;color: #55f655;font-size: 0.8em">
+            <li>Skriv 'npm init' i terminalen, og følg proceduren.</li>
+            <li>Opret den manuelt i roden af mappen på projektet.</li>
+        </div>
+        <p>
+            Gøres det med 'npm init', bliver man guidet igennem de forskellige indstillinger - gøres det manuelt, skal man huske at gå ind i filen og tilføje { }, ellers kan den ikke genkendes som en json fil.
+            <br><br>
+            Herefter kan man bruge npm kommandoer til at tilføje de dependencies som man igennem projektet skal bruge.
+            <br><br>
+            Det vil også blive gennemgået i fremgangsmåden.
+        </p>
+        <p style="color: red">OBS</p>
+        <p>
+            Windows brugere anbefales at ændre 'Shell path' til Powershell, da der i denne gennemgang vil blive brugt terminalen til at tilføje dependencies til projektet.
+            <br>
+            Powershell kan hentes fra windows store.
+            <br><br>
+            Ændring af shell path:
+        <br><br>
+        </p>
+        <p style="text-align: center;color: #55f655">
+            Settings ➞ Tools ➞ Terminal ➞ Shell Path ➞ Skriv "powershell"
+        </p>
+        <h4 id="link4">Fremgangsmåde</h4>
+        <ol id="listing">
+            <li>Åben IntelliJ og vælg 'Nyt projekt'</li>
+            <li>
+                Vælg 'Javascript' i venstre fane, og vælg derefter Javascript igen i den højre fane. <br>
+                <div class="underlists">
+                    "Empty project for developing apps using JavaScript, HTML, CSS, and Node.js."
+                </div>
+            </li>
+            <li>
+                Opret en JS-fil i roden af mappen, der skal kaldes 'app.js' <br>
+                <div class="underlists">
+                    Dette vil være den fil som bruges til at lave get/post/put/delete mappings, og meget mere.
+                </div>
+            </li>
+
+            <li>
+                Åben terminalen og sørg for at du er på stien til projektets rod. <br>
+                <div class="underlists" style="margin-bottom: 2%">
+                    Mit projekt hedder '1_Note_Website', og derfor skal jeg være i mappen '..\1_Note_Website'
+                    <br><br>
+                    <img src="/images/path1.jpg" alt="path1" class="images" style="margin-left: 15%">
+                    <br>
+                    <img src="/images/path2.jpg" alt="path2" class="images">
+                    <br>
+                </div>
+            </li>
+            <li>Skriv 'npm init' i terminalen.</li>
+            <li>
+                Følg guiden (Hvis man trykker enter uden at indtaste noget, vil der blive brugt en standard.) <br>
+                <div class="underlists">
+                    ★ Vælg et passende package navn. <br>
+                    ★ Version nummeret skal gerne matche konventionen (Starter med 0.0.1 ➞ 1.0.0 er når programmet er publiseret). <br>
+                    ★ Indtast en passende beskrivelse til projektet. <br>
+                    ★ Entry point skal sættes til den oprettede fil som blev kaldt 'app.js'. <br>
+                    ★ Git repository er link til projektet på github. <br>
+                    ★ Keywords er hvilke søgeord som der få projektet til at blive vist i søgningen. <br>
+                    ★ License skal sættes til 'MIT'. <br><br>
+                    Derefter vil package.json blive oprettet, og man kan åbne den for at se de indstillinger man har valgt.
+                    <br><br>
+                    Den skulle gerne se nogenlunde sådan her ud:
+                    <br><br>
+                    <img src="/images/package_json.jpg" alt="path1" class="images" style="margin-left: 4%">
+                </div>
+            </li>
+            <li>
+                Installér
+            </li>
+        </ol>
         <br>
     </div>
 </div>
-
-
-
 </body>
 </html>
