@@ -104,14 +104,14 @@ h1, h2, h3, h4, h5, h6 {
     color: white;
     text-shadow: 2px 2px #000000;
 }
-#separator {
+.separator {
     margin-left: 5%;
     margin-right: 5%;
 }
 
 #listing {
     font-size: 0.9em;
-    margin-left: -25%;
+    margin-left: -45%;
 }
 
 #listing li {
@@ -127,7 +127,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .images {
     display: block;
-    margin-left: initial;
+    margin-left: 22%;
     margin-right: initial;
     border: 1px solid black;
 }
