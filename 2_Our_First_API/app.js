@@ -6,6 +6,8 @@ const encoding = require('encoding');
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
 
+app.use(express.static(__dirname+ "/public/"));
+
 app.get("/", (req, res) => {
 return res.send("<h1>Hello World!</h1><br><a href='./documentation'>Documentation</a>");
 })

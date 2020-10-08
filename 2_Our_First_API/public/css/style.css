@@ -1,0 +1,32 @@
+body {
+    font-family: Bahnschrift, serif;
+    background-size: 100% 100%;
+    background-image: url('../img/cool_cats.jpg');
+    background-attachment: fixed;
+}
+h1 {
+    text-align: center;
+}
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid black;
+}
+div {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.td_left {
+    text-align: left;
+}
+.td_mid {
+    text-align: center;
+}
+.td_right {
+    text-align: right;
+}
+tr {
+    background-color: white;
+    opacity: 100%;
+}
