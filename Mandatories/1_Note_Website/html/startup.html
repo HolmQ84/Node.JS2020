@@ -32,6 +32,7 @@
     <div class="textfield">
         <h2>Oprettelse af et <img src="/images/node-logo.png" alt="image" style="width: 130px;height: 40px"> projekt</h2>
         <hr id="separator">
+        <br>
         <p>
             Her bliver der beskrevet præcis hvad man skal bruge for at starte et projekt op, og derefter komme igang med at bygge sin webapplikation.<br><br>
             Node JS tilbyder flere forskellige måder at gøre tingene på, men der vil her blive taget udgangspunkt i hovedsageligt én enkelt måde, hvorefter man selv kan undersøge og finde alternative måder at komme gennem oprettelsen af projektet.
@@ -46,7 +47,8 @@
             <br>
         </p>
 
-        <div style="margin-left: 7%">
+        <div class="underlists" style="margin-left: 10%">
+            <li><a href="https://www.jetbrains.com/idea/">IntelliJ</a></li>
             <li><a href="https://visualstudio.microsoft.com/">Visual Studio</a></li>
             <li><a href="https://www.eclipse.org/">Eclipse</a></li>
             <li><a href="https://pypl.github.io/IDE.html">Andre IDE'er</a></li>
@@ -91,20 +93,23 @@
         <ol id="listing">
             <li>Åben IntelliJ og vælg 'Nyt projekt'</li>
             <li>
-                Vælg 'Javascript' i venstre fane, og vælg derefter Javascript igen i den højre fane. <br>
+                Vælg 'Javascript' i venstre fane, og vælg derefter Javascript igen i den højre fane.
+                <br>
                 <div class="underlists">
-                    "Empty project for developing apps using JavaScript, HTML, CSS, and Node.js."
+                    "Tomt projekt for at udvikle apps med JavaScript, HTML, CSS, and Node.js."
                 </div>
             </li>
             <li>
                 Opret en JS-fil i roden af mappen, der skal kaldes 'app.js' <br>
                 <div class="underlists">
-                    Dette vil være den fil som bruges til at lave get/post/put/delete mappings, og meget mere.
+                    Dette vil være den fil som blandt andet bruges til at lave get/post/put/delete mappings, og en
+                    <br> række andre ting, som der vil blive beskrevet senere.
                 </div>
             </li>
 
             <li>
-                Åben terminalen og sørg for at du er på stien til projektets rod. <br>
+                Åben terminalen og sørg for at du er på stien til projektets rod.
+                <br>
                 <div class="underlists" style="margin-bottom: 2%">
                     Mit projekt hedder '1_Note_Website', og derfor skal jeg være i mappen '..\1_Note_Website'
                     <br><br>
@@ -114,18 +119,18 @@
                     <br>
                 </div>
             </li>
-            <li>Skriv 'npm init' i terminalen.</li>
             <li>
-                Følg guiden (Hvis man trykker enter uden at indtaste noget, vil der blive brugt en standard.) <br>
+                Skriv 'npm init' i terminalen og følg guiden
+                <br>
                 <div class="underlists">
-                    ★ Vælg et passende package navn. <br>
-                    ★ Version nummeret skal gerne matche konventionen (Starter med 0.0.1 ➞ 1.0.0 er når programmet er publiseret). <br>
-                    ★ Indtast en passende beskrivelse til projektet. <br>
-                    ★ Entry point skal sættes til den oprettede fil som blev kaldt 'app.js'. <br>
-                    ★ Git repository er link til projektet på github. <br>
-                    ★ Keywords er hvilke søgeord som der få projektet til at blive vist i søgningen. <br>
-                    ★ License skal sættes til 'MIT'. <br><br>
-                    Derefter vil package.json blive oprettet, og man kan åbne den for at se de indstillinger man har valgt.
+                    ● Vælg et passende package navn. <br>
+                    ● Version nummeret skal gerne matche konventionen (Starter med 0.0.1 ➞ 1.0.0 er når programmet er publiseret). <br>
+                    ● Indtast en passende beskrivelse til projektet. <br>
+                    ● Entry point skal sættes til den oprettede fil som blev kaldt 'app.js'. <br>
+                    ● Git repository er link til projektet på github. <br>
+                    ● Keywords er hvilke søgeord som der få projektet til at blive vist i søgningen. <br>
+                    ● License skal sættes til 'MIT'. <br><br>
+                    Derefter vil package.json blive oprettet i rodmappen, og man kan derefter åbne den for at se de <br>indstillinger man har valgt.
                     <br><br>
                     Den skulle gerne se nogenlunde sådan her ud:
                     <br><br>
@@ -135,6 +140,28 @@
             </li>
             <li>
                 Installér dependencies
+                <br>
+                <div class="underlists">
+                    For at holde det simpelt, vil der kun blive brugt to forskellige dependencies i denne gennemgang.
+                    <br><br>
+                    ● Express <br><br>
+                    Express er et lille og fleksibelt framework til Node.js, som giver adgang til en række brugbare <br>features til webudvikling
+                    <br><br>
+                    ● Nodemon <br><br>
+                    Nodemon er et smart lille framework, som automatisk restarter serveren - hver gang vi laver <br>ændringer i koden.
+                    <br><br>
+                    For at installere disse to dependencies, skal man have fat i terminalen og skrive følgende: <br><br>
+                    <div style="color: #38cd38;margin-left: 15%">
+                            npm install -g express <br>
+                            npm install --save-dev nodemon
+                    </div>
+                    <br>
+                    Man vil nu kunne se i terminalen, at de installeres på projektet. <br>
+                    Samtidig bliver de tilføjet som en entry til package.json, som nu burde se således ud: <br>
+                    <br><br>
+                    <img src="/images/package_json2.jpg" alt="path1" class="images" style="margin-left: 4%">
+                    <br>
+                </div>
             </li>
         </ol>
         <br>
