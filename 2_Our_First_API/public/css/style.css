@@ -11,7 +11,8 @@ img {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    border: 1px solid black;
+    border: 3px solid black;
+    border-radius: 10px;
 }
 div {
     margin-left: 10%;
@@ -33,4 +34,8 @@ tr {
 .header {
     background-color: black;
     color: white;
+}
+
+#cats {
+
 }
