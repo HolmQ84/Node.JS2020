@@ -30,3 +30,7 @@ tr {
     background-color: white;
     opacity: 100%;
 }
+.header {
+    background-color: black;
+    color: white;
+}
