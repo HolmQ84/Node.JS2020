@@ -18,6 +18,14 @@ div {
     margin-left: 10%;
     margin-right: 10%;
 }
+th {
+    background-color: #585757;
+    color: whitesmoke;
+    font-size: 1.3em;
+}
+thead {
+    border-bottom: 3px solid black;
+}
 .td_left {
     text-align: left;
 }
@@ -38,4 +46,10 @@ tr {
 
 #cats {
 
+}
+
+.numlinks {
+    font-size: 2em;
+    color: black;
+    font-weight: bold;
 }
