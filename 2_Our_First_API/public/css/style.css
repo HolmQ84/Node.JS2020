@@ -2,7 +2,6 @@ body {
     background-size: 100% 100%;
     background-image: url('../img/cool_cats.jpg');
     background-attachment: fixed;
-    font-family: Bahnschrift, serif;
 }
 h1 {
     font-weight: bold;
