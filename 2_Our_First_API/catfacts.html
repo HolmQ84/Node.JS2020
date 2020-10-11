@@ -36,16 +36,16 @@
     function loadCatFacts() {
         $('#bodycats').empty();
         $.get("https://cat-fact.herokuapp.com/facts", (response) => {
-            const everything = response.all;
-            for (let i = 0; i<everything.length; i++) {
+            const alljsons = response.all;
+            for (let i = 0; i < alljsons.length; i++) {
                 let tempName;
                 try {
-                    tempName = everything[i].user.name.first + " "+everything[i].user.name.last;
+                    tempName = alljsons[i].user.name.first + " " + alljsons[i].user.name.last;
                 } catch (err) {
-                    tempName = "";
+                    tempName = "Anonymous";
                 }
-                const row = $('<tr><td class="td_mid">' + (i+1) + '</td><td>' + everything[i].text + '</td><td class="td_mid">'
-                    + everything[i].upvotes + '</td><td class="td_right">' + tempName +'</td></tr>');
+                const row = $('<tr><td class="td_mid">' + (i+1) + '</td><td>' + alljsons[i].text + '</td><td class="td_mid">'
+                    + alljsons[i].upvotes + '</td><td class="td_right">' + tempName +'</td></tr>');
                 $('#cats').append(row);
             }
         });
