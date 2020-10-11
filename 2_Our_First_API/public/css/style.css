@@ -53,3 +53,7 @@ tr {
     color: black;
     font-weight: bold;
 }
+
+.pictures {
+    height: auto;
+}
