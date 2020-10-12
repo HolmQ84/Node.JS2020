@@ -38,14 +38,14 @@
         $.get("https://cat-fact.herokuapp.com/facts", (response) => {
             const alljsons = response.all;
             for (let i = 0; i < alljsons.length; i++) {
-                let tempName;
+                let fullname;
                 try {
-                    tempName = alljsons[i].user.name.first + " " + alljsons[i].user.name.last;
+                    fullname = alljsons[i].user.name.first + " " + alljsons[i].user.name.last;
                 } catch (err) {
-                    tempName = "N/A";
+                    fullname = "N/A";
                 }
                 const row = $('<tr><td class="td_mid">' + (i+1) + '</td><td>' + alljsons[i].text + '</td><td class="td_mid">'
-                    + alljsons[i].upvotes + '</td><td class="td_right">' + tempName +'</td></tr>');
+                    + alljsons[i].upvotes + '</td><td class="td_right">' + fullname +'</td></tr>');
                 $('#cats').append(row);
             }
         });
