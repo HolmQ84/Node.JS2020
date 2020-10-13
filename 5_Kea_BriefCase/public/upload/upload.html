@@ -3,10 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <title>Kea Briefcase</title>
-    <link rel="stylesheet" href="./upload/upload.css">
+        <link rel="stylesheet" href="./upload/upload.css">
+        <link rel="stylesheet" href="./global.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
+<br>
+<img src="/img/logo.jpg" alt="image" class="logo">
 <body>
-<h1>Upload</h1>
+
+<form action="/form" method="post" onsubmit="validateForm()">
+    <textarea id="form-message" cols="50" rows="10" placeholder="Skriv din besked her.." name="message"></textarea>
+    <br>
+    <button id="form-submit1" onclick="handleFormSubmitted()">Get Done</button>
+    <button id="form-submit2" type="submit">Post Done</button>
+</form>
+
+<p>Hi there</p>
+
+<!--Create a footer with copyright + year-->
+
+<footer id="footer"><span>Copyrightⓒ</span><span id="currentYear"></span><a href="/about"><button>About</button></a></footer>
 <script src="./upload/upload.js"></script>
 </body>
 </html>
