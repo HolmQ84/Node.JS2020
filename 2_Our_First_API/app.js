@@ -1,7 +1,6 @@
 const express = require("express");
 const app = express();
 const fetch = require('node-fetch');
-const encoding = require('encoding');
 
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());

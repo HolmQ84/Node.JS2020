@@ -20,7 +20,7 @@
         <a href="#link3">Dependencies</a>
         <a href="#link4">Fremgangsmåde</a>
     </div>
-    <a href="/building">Byg en hjemmeside</a>
+    <a href="/building">Opbygning af en hjemmeside</a>
     <a href="/jQuery">jQuery</a>
 </div>
 <!-- Navigation bar slut -->
@@ -151,7 +151,7 @@
                     Nodemon er et smart lille framework, som automatisk restarter serveren - hver gang vi laver <br>ændringer i koden.
                     <br><br>
                     For at installere disse to dependencies, skal man have fat i terminalen og skrive følgende: <br><br>
-                    <div style="color: #38cd38;margin-left: 15%">
+                    <div class="commands">
                             npm install -g express <br>
                             npm install --save-dev nodemon
                     </div>
@@ -161,6 +161,47 @@
                     <br><br>
                     <img src="/images/package_json2.jpg" alt="path1" class="images" style="margin-left: 4%">
                     <br>
+                </div>
+            </li>
+            <li>
+                Opsætning af app.js
+                <br>
+                <div class="underlists">
+                    App.js er filen som binder hele projektet sammen. <br>Det er i denne fil hvor man gør brug af forskellige dependencies, opretter get/post/put/delete mappings, og linker til forskellige filer i ens projekt.
+                    <br><br>
+                    For at gøre brug af express pakken, skal den initialiseres gennem app.js.
+                    <br><br>
+                    Det gøres ved at skrive følgende øverst i app.js filen: <br><br>
+                    <div class="commands">
+                        const express = require("express"); <br>
+                        const app = express();
+                    </div>
+                    <br>
+                    Herefter kan man kalde app variablen for at adgang til en række forskellige brugbare funktioner.
+                    <br><br>
+                    I dette projekt vil vi gøre brug af 2 forskellige features i express pakken: <br><br>
+                    ● JSON parser <br> <br>
+                    Bruges til at kunne sende og modtage json filer gennem body'en på en vilkårlig html side. <br><br>
+                    ● Static <br><br>
+                    Bruges til at gøre en række filer tilgængelige i html filerne og i app.js filen. <br>
+                    Fx. CSS stylesheets, billeder, mm.
+                    <br><br>
+                    Initialiser features således: <br><br>
+                    <img src="/images/app_use_features.jpg" alt="pic" style="margin-left: 10%">
+                    <br><br>
+                    __dirname+"/public" fortæller express at den skal finde og bruge en mappe i den mappe hvor app.js filen ligger, som hedder "public".
+                    <br>
+                    Herefter vil man have adgang til alle undermapper af denne public mappe, hvilket betyder at det er i denne mappe man lægger alle css- og image filer.
+                    <br><br>
+                    For at kunne køre en server op, skal der specificeres en port, hvor der lyttes efter requests. <br>
+                    Igen bruges express til at køre denne server op. <br><br>
+                    Lav en app.listen som billedet under viser: <br><br>
+                    <img src="/images/app_listen.jpg" alt="pic" style="margin-left: 10%">
+                    <br><br>
+                    Porten angiver hvilken port serveren køres op på, her bruges 8080 som er standard for localhost webapps.
+                    <br><br>
+                    Nu er vi klar til at bygge hjemmesiden op, hvilket vil blive beskrevet under
+                    <a href="/building">opbygning af en hjemmeside</a>.
                 </div>
             </li>
         </ol>

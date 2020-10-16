@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 
-const info = require("C:/Users/marti/IdeaProjects/3.Semester/Node.JS2020/3_Car_API/package.json");
+const info = require("C:/Users/marti/IdeaProjects/Node.JS2020/3_Car_API/package.json");
 
 // Gør det muligt at returnere data i json format, på et post map - gennem en querystring.
 app.use(express.json());
@@ -60,7 +60,7 @@ app.delete("/cars/:id", (req, res) => {
 // Environment variables
 console.log(process.env.PORT);
 // Unary expressions:
-const portNumber = process.env.PORT || 80;
+const portNumber = process.env.PORT || 8080;
 // Ternary expressions:
 // const portNumber = process.env.PORT ? process.env.PORT : 80;
 
