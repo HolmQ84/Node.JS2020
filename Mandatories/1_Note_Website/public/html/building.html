@@ -16,9 +16,10 @@
     <a href="/gettingstarted">Oprettelse af projekt</a>
     <a href="/building">Opbygning af en hjemmeside</a>
     <div class="underlinks">
+        <a href="#link4">Functions & Arrow functions</a>
         <a href="#link1">App.js</a>
         <a href="#link2">Get, Post, Put & Delete</a>
-        <a href="#link3">Link til html sider</a>
+        <a href="#link3">HTML sider</a>
     </div>
     <a href="/jQuery">jQuery</a>
 </div>
@@ -33,30 +34,44 @@
         <hr id="separator">
         <br>
         <p>
-            Her vil der blive gået i dybden med hvordan man opbygger en hjemmeside med html filer, links, billeder og stylesheets.
+            Her vil der blive gået i dybden med hvordan man opbygger en hjemmeside med html filer, links, billeder og
+            stylesheets.
+        </p>
+        <h4 id="link4">Functions</h4>
+        <p>
+            Normale funktioner i javascript skrives normalt således: <br><br>
+
         </p>
         <h4 id="link1">App.js</h4>
         <p>
-            App.js filen bruges til at lave entries til alle de html sider man vil bruge, samt initialisere og bruge de forskellige dependencies som man vil gøre brug af i sit projekt.<br><br>
-            Der er tidligere blevet beskrevet om <span>app.listen</span>, som er den metode som får serveren op og kører til en hjemmeside.<br><br>
-            Derudover er der de klassiske funktioner i et RESTful api, som er <span>GET</span>, <span>POST</span>, <span>PUT/PATCH</span> og <span>DELETE</span>.<br><br>
+            App.js filen bruges til at lave entries til alle de html sider man vil bruge, samt initialisere og bruge de
+            forskellige dependencies som man vil gøre brug af i sit projekt.<br><br>
+            Der er tidligere blevet beskrevet om <span>app.listen</span>, som er den metode som får serveren op og kører
+            til en hjemmeside.<br><br>
+            Derudover er der de klassiske funktioner i et RESTful api, som er <span>GET</span>, <span>POST</span>,
+            <span>PUT/PATCH</span> og <span>DELETE</span>.<br><br>
         </p>
         <h4 id="link2">Get, Post, Put, Delete</h4>
         <h5>GET Mappings</h5>
         <p>
-            <span>GET-Mapping</span> er den der bruges når man vil lave et get-request, altså hente et eller andet - html-side, database elementer, etc.<br><br>
-            I et klassisk RESTful api er der som regelt 2 get-mappings til en database, nemlig en 'get all' og en 'get one'.<br>
+            <span>GET-Mapping</span> er den der bruges når man vil lave et get-request, altså hente et eller andet -
+            html-side, database elementer, etc.<br><br>
+            I et klassisk RESTful api er der som regelt 2 get-mappings til en database, nemlig en 'get all' og en 'get
+            one'.<br>
             Vi tager udgangspunkt i et eksempel med en liste af frugter. <br><br>
-            Nedenunder er der et get-mapping til en liste af frugter. I dette tilfælde bruges en simpel array, for blot at illustrere hvordan det fungere.<br><br>
+            Nedenunder er der et get-mapping til en liste af frugter. I dette tilfælde bruges en simpel array, for blot
+            at illustrere hvordan det fungere.<br><br>
             <a href="/fruits" style="margin-left: 45%">Liste af frugter</a><br><br>
             Listen er lavet således: <br><br>
             <img class="images" src="/images/list_of_fruits.jpg" alt="img" style="margin-left: 40%"><br><br>
             For at hente listen, skal der laves et get-mapping i app.js filen, som ser ud som følger:<br><br>
             <img class="images" src="/images/get_all.jpg" alt="" style="margin-left: 25%"><br><br>
-            I et node.js projekt kan man lave queries på 2 forskellige måder, nemlig som <span>query strings</span> eller <span>path variabler</span>.<br><br>
+            I et node.js projekt kan man lave queries på 2 forskellige måder, nemlig som <span>query strings</span>
+            eller <span>path variabler</span>.<br><br>
             <span style="margin-left: 5%">Path Variabler:</span> <br><br>
             <img class="images" src="/images/get_one.jpg" alt="" style="margin-left: 25%"><br><br>
-            'Path Variabler' requester et parameter som kommer med i url'en, og matcher den med et id i array'et af frugter.<br>
+            'Path Variabler' requester et parameter som kommer med i url'en, og matcher den med et id i array'et af
+            frugter.<br>
             Her kan man kun indtaste et enkelt parameter, hvorimod en querystring kan tage flere parametre med. <br><br>
             Man kan her prøve at ændre id'et i enden af url'en, for at kalde på en respektiv item i arrayet. <br><br>
             <a href="http://localhost:8080/fruits/path/1" style="margin-left: 39%">http://localhost:8080/fruits/path/1</a> <br><br>
@@ -64,7 +79,8 @@
             <img class="images" src="/images/queryString.jpg" alt="" style="margin-left: 25%"><br><br>
             'Query Strings' skrives igen i url'en, men med en anden syntax, nemlig:<br><br>
             <span style="margin-left: 35%">http://www.test.dk/?id=17&navn=ole&alder=107</span> <br><br>
-            <span>?</span> viser hvor query stringen starter, og <span>&</span> viser hvor en ny query string element starter.<br><br>
+            <span>?</span> viser hvor query stringen starter, og <span>&</span> viser hvor en ny query string element
+            starter.<br><br>
             I det ovenstående eksempel er der derfor 3 parametre med i en querystring, nemlig: <br><br>
             ● id = 17 <br>
             ● navn = ole <br>
@@ -75,31 +91,74 @@
         </p>
         <h5>POST Mappings</h5>
         <p>
-            <span>POST-Mapping</span> er den der bruges når man vil lave et post-request, fx lave en ny entry til en database eller liste.<br><br>
-            I dette eksempel vil der blive brugt et eksternt program kaldet <span>Postman</span> til at lave post-requestet, da der ikke er oprettet en html form til at tage input.<br><br>
-            For at få et post-mapping til at virke, skal det specificeres at det er et post mapping, og det kan Postman klarer, uden vi skal til at lave en html form og behandle den efterfølgende.<br>
+            <span>POST-Mapping</span> er den der bruges når man vil lave et post-request, fx lave en ny entry til en
+            database eller liste.<br><br>
+            I dette eksempel vil der blive brugt et eksternt program kaldet <span>Postman</span> til at lave
+            post-requestet, da der ikke er oprettet en html form til at tage input.<br><br>
+            For at få et post-mapping til at virke, skal det specificeres at det er et post mapping, og det kan Postman
+            klarer, uden vi skal til at lave en html form og behandle den efterfølgende.<br>
             En indtastning i en url vil nemlig som standard være et get kald.<br><br>
             I <span>app.js</span> laver man en post metode: <br><br>
             <img class="images" src="/images/post_one.jpg" alt="" style="margin-left: 22%"><br><br>
-            Query stringen man indtaster vil blive sendt afsted i body'en, derfor oprettes den nye frugt via <span>req.body</span>.<br><br>
-            I det array som er oprettet, er der et parameter som hedder <span>name</span>, så hvis der vil tilføjes yderligere elementer via post-mappings med samme egenskaber, skal man lave en query string med <span>name</span> som parameter.<br><br>
-            Der er dog ikke lavet nogle former for begrænsninger på de elementer man tilføjer til arrayet, så man kunne også sagtens lave 17 query strings med diverse variabler, som bare ville blive tilføjet til arrayet.
+            Query stringen man indtaster vil blive sendt afsted i body'en, derfor oprettes den nye entry via
+            <span>req.body</span>.<br><br>
+            I det array som er oprettet, er der et parameter som hedder <span>name</span>, så hvis der vil tilføjes
+            yderligere elementer via post-mapping med samme egenskaber, skal man lave en query string med
+            <span>name</span> som parameter.<br><br>
+            Der er dog ikke lavet nogle former for begrænsninger på de elementer man tilføjer til arrayet i JS, så man
+            kunne også sagtens lave 17 query strings med diverse variabler, som bare ville blive tilføjet til arrayets
+            entry.
         </p>
         <h5>PUT/PATCH Mappings</h5>
         <p>
             <span>PUT/PATCH-mapping</span> bruges til at redigere et element eller en entry i en database.<br><br>
-            Hovedforskellen mellem PUT- og PATCH-metoden er, at PUT-metoden bruger URI-anmodningen til at levere en ændret version af den anmodede ressource, der erstatter den oprindelige version af ressourcen, mens PATCH-metoden leverer et sæt instruktioner til at ændre ressourcen.<br><br>
-            I denne gennemgang bruges <span>Patch</span>, og det samme gælder for patch mappings som det gør med post mappings - nemlig at der bruges Postman til at fortælle at vi smider url'en afsted som et patch map.<br><br>
-
-
+            Hovedforskellen mellem PUT- og PATCH-metoden er, at PUT-metoden bruger URI-anmodningen til at levere en
+            ændret version af den anmodede ressource, der erstatter den oprindelige version af ressourcen, mens
+            PATCH-metoden leverer et sæt instruktioner til at ændre ressourcen.<br><br>
+            I denne gennemgang bruges <span>Patch</span>, og det samme gælder for patch mappings som det gør med post
+            mappings - nemlig at der bruges Postman til at fortælle at url'en skal sendes afsted som et patch map.<br><br>
+            I <span>app.js</span> laver man en patch metode: <br><br>
+            <img class="images" src="/images/patch_one.jpg" alt="" style="margin-left: 22%"><br><br>
+            Path'en "/fruits/:id" er en path variable på id'et, som ved indtastning af fx. "fruits/1" går ind i det array
+            der er lavet, og tjekker om der er et entry med et id = 1.
+            <br><br>
+            I funktionen kan man se at den først går ind og laver et map på fruits arrayet, og derefter tjekker om id'et
+            matcher med noget - hvis den gør, går den ind og ændrer variablerne man har noteret i postman, og derefter
+            returnere listen af entries fra arrayet.
+            <br><br>
         </p>
         <h5>Delete Mappings</h5>
         <p>
             <span>Delete-Mapping</span> bruges til at slette et element eller en entry.<br><br>
+            I <span>app.js</span> laver man en delete metode: <br><br>
+            <img class="images" src="/images/delete_one.jpg" alt="" style="margin-left: 22%"><br><br>
+            Igen gøres det gennem et program som postman, og det er igen en path variable der bruges til at matche id'et
+            man indtaster med det i arrayet. <br><br>
+            Metoden <span>fruits = fruits.filter(...)</span> går ind og filtrere det element væk som matcher det
+            indtastede id.
         </p>
-        <h4 id="link3">Link til html sider</h4>
+        <h4 id="link3">HTML sider</h4>
         <p>
-            I et Node JS projekt kan man tilføje diverse dependencies som man ønsker at benytte gennem udviklingen af applikationen
+            I eksemplerne ovenover gøres der ikke brug af html sider, hvilket også gør at links linker til en tom html
+            side med json objekter.
+            <br><br>
+            Ønsker man at linke get-mappings til html sider, skal det noteres som vist herunder: <br><br>
+            <img class="images" src="/images/html.jpg" alt="" style="margin-left: 28%"><br><br>
+            Altså i stedet for <span>res.send(...)</span> bruges <span>res.sendFile(...)</span>. Som skrevet tidligere
+            bruges
+            <span>__dirname</span> til at pege på den mappe man er i (hvor app.js ligger), og tilføjer så stien til det
+            præcise html dokument. De behøver ikke nødvendigvis at ligge i 'public' mappen, men en mappe for alle html-
+            filer gør det langt mere overskueligt at finde og holde styr på, hvis webappen vokser sig stor.
+        </p>
+        <h5>Link til stylesheets</h5>
+        <p>
+            For at kunne tilgå de stylesheets som man ønsker at bruge til de givne html-sider, skal man huske at tilføje
+            dem i headeren således: <br><br>
+            <img class="images" src="/images/stylesheets.jpg" alt="" style="margin-left: 32%"><br><br>
+            Her specificerer man at det er et stylesheet gennem <span>type</span> og laver en <span>href</span> til den
+            mappe hvor stylesheets ligger. Husk at det er igennem <span>app.use(express.static(__dirname+ "/public/"))</span>
+            kommandoen i app.js at man får adgang til de filer som ligger i public mappen, og det er den samme mappe man
+            dirigerer videre fra - derfor ligger stylesheet i dette projekt under <span>public/css/general.css</span>.
         </p>
         <br>
     </div>
