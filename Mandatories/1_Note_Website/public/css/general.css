@@ -30,7 +30,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .main {
     margin-left: 10%;
-    font-size: 28px;
+    font-size: 2em;
     padding: 10px;
 }
 .pictures {
@@ -105,8 +105,8 @@ h1, h2, h3, h4, h5, h6 {
     text-shadow: 2px 2px #000000;
 }
 .separator {
-    margin-left: 5%;
-    margin-right: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 #listing {
@@ -126,10 +126,12 @@ h1, h2, h3, h4, h5, h6 {
     color: white;
 }
 
-.images {
-    display: block;
-    margin-right: initial;
+img {
     border: 1px solid black;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
 }
 
 .commands {
