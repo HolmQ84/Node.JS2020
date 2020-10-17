@@ -18,6 +18,7 @@
     <a href="/jQuery" style="color: darkgrey">jQuery</a>
     <div class="underlinks">
         <a href="#link1">Hvordan virker jQuery?</a>
+        <a href="#link2">Kom igang med jQuery</a>
         <a href="#link3">Eksempler på brug af jQuery</a>
     </div>
 </div>
@@ -41,10 +42,10 @@
             jQuery virker ved at kalde forskellige 'selectors', for derigennem at lave ændringer på websiden. <br><br>
             Selectors kan deles op i tre forskellige kategorier: <br>
         </p>
-        <div style="margin-left: 10%;color: #38cd38;font-size: 0.8em">
-            <li>tags</li>
-            <li>classes</li>
-            <li>ids</li>
+        <div class="inwardsList">
+            <li>tag</li>
+            <li>class</li>
+            <li>id</li>
         </div>
         <p>
             <span>Tags</span> er html tags såsom: head, body, div, h1-h6, p, etc. - og kan bruges til at sørge for at alle elementer
@@ -57,17 +58,94 @@
             <span>"#image"</span>.<br><br>
             Gennem en af disse tre metoder, kan man bruge jQuery til at tilføje egenskaber til sine html-elementer - hvilket
             gøres efter en html side er blevet loaded. <br><br>
-            Antallet af forskellige muligheder for særlige egenskaber er mange, men et par eksempler kan fx være at
-            gøre elementer usynlige ved forskellige events (fx ved at klikke på noget, pege på noget eller ved et tidsbestemt
-            timeout) - eller bruge input felter direkte til at tilføje noget til en database eller ændre noget på siden,
-            uden at skulle reloade hele siden.
+            Antallet af forskellige muligheder for særlige egenskaber og effekter er mange, og følgende liste giver et overblik
+             på de mange muligheder man har for at ændre i indholdet på html-siden. <br><br>
+            jQuery kan bl.a. bruges til: <br>
+        </p>
+        <div class="inwardsList">
+            <li>HTML/DOM manipulationer</li>
+            <li>CSS manipulationer</li>
+            <li>HTML event metoder</li>
+            <li>Effekter and animationer</li>
+            <li>AJAX</li>
+            <li>Utilities</li>
+        </div>
+        <h4 id="link2">Kom igang med jQuery</h4>
+        <p>
+            For at bruge jQuery's bibliotek, skal det inkluderes i projektet - dette kan gøres på to forskellige måder.
+            <br>
+            Man kan vælge at have JS koden nederst i sit dokument som internt, eller man kan vælge at oprette et
+            eksternt javascript dokument, og linke det til html-siden. <br><br>
+        </p>
+        <h6>Intern brug af jQuery</h6>
+        <p>
+            Ved intern brug af jQuery, skal man nederst i html dokumentet - lige inden body'en slutter - lave et script
+            tag. Derinde kan man skrive javascript kode, og lave sine jQuery funktioner. Se på billedet nedenunder, for
+            at se hvor script tagget skal være.
+        </p>
+        <img src="/images/jQuery_intern.jpg" alt="" class="centredPics" style="width: 30%">
+        <h6>Ekstern brug af jQuery</h6>
+        <p>
+            Ved ekstern brug af jQuery skal der oprettes en ny js fil, den skal lægges inde i <span>public</span> mappen
+            for at den er tilgængelig. I dette eksempel er der lavet en mappe kaldet 'js', og inde i denne mappe lægges
+            js filen. <br><br>
+        </p>
+        <img src="/images/jQuery_jslocation.jpg" alt="" class="centredPics" style="width: 20%">
+        <p>
+            I det html dokument hvor man vil gøre brug af javascript filen, skal man nederst i body'en lave et script
+            tag, hvor man laver en href på filens placering. <br><br>
+            Se nedenunder hvor filen skal placeres.
+        </p>
+        <img src="/images/jQuery_extern_link.jpg" alt="" class="centredPics" style="width: 30%">
+        <br>
+        <p>
+            Herefter kan man skrive javascript kode inde i den eksterne js fil, og lave sine jQuery funktioner.
         </p>
         <h4 id="link3">Eksempler på brug af jQuery</h4>
         <p>
-            Her vil jeg gennemgå en række eksempler på ting man kan bruge jQuery til.
+            Her vil jeg gennemgå en række eksempler på ting man kan bruge jQuery til. <br><br>
         </p>
-        <br>
+        <li class="green">
+            Onclick funktioner
+        </li>
+        <p>
+            Onclick funktioner kan få ting til at ske ved at trykke et bestemt sted. <br>Det kan være alt fra en knap, til
+            et tilfældig valgt ord et sted på siden, kun fantasien sætter grænser. <br><br>
+        </p>
+        <table id="jqueryTable">
+            <tr>
+                <th class="jQueryHeader">Forklaring</th>
+                <th class="jQueryHeader">Eksempel</th>
+                <th class="jQueryHeader">Koden bag</th>
+            </tr>
+            <tr>
+                <td>
+                    <p>
+                        Klik funktion
+                    </p>
+                </td>
+                <td>
+                    <section class="dot" id="jquery1"></section>
+                </td>
+                <td>
+                    <img src="/images/jquery1.jpg" alt="img" style="width: 80%">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>
+                        Dobbelt klik funktion
+                    </p>
+                </td>
+                <td>
+                    <section class="dot" id="jquery2"></section>
+                </td>
+            </tr>
+
+        </table>
+        <br><br>
     </div>
 </div>
+<script src="./js/jQuery.js"></script>
 </body>
 </html>

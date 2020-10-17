@@ -142,3 +142,34 @@ span {
     margin-right: auto;
     width: 50%;
 }
+.green {
+    color: #55f655;
+}
+.inwardsList {
+    margin-left: -50%;
+    color: #38cd38;
+    font-size: 0.8em
+}
+
+.left {
+    left: 0;
+}
+.right {
+    right: 0;
+}
+.dot {
+    height: 100px;
+    width: 100px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+}
+#jqueryTable p{
+    text-align: center;
+}
+.jQueryHeader {
+    width: 33%;
+    font-size: 0.7em;
+    padding-bottom: 2%;
+    color: #38cd38;
+}
