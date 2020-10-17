@@ -18,7 +18,6 @@
     <a href="/jQuery" style="color: darkgrey">jQuery</a>
     <div class="underlinks">
         <a href="#link1">Hvordan virker jQuery?</a>
-        <a href="#link2">Hvad bruges jQuery til?</a>
         <a href="#link3">Eksempler på brug af jQuery</a>
     </div>
 </div>
@@ -33,15 +32,35 @@
         <hr id="separator">
         <p>
             Her bliver beskrevet hvordan man kan anvende jQuery til at gøre html-sider mere intuitive, samt gøre
-            brugeroplevelsen bedre.
+            brugeroplevelsen bedre. <br><br>
+            jQuery er et platformsuafhængigt JavaScript-bibliotek der har til formål at gøre det nemmere at lave
+            programmer til webbrowsere.
         </p>
         <h4 id="link1">Hvordan virker jQuery?</h4>
         <p>
-            Her skrives noget om hvordan jQuery opererer.
+            jQuery virker ved at kalde forskellige 'selectors', for derigennem at lave ændringer på websiden. <br><br>
+            Selectors kan deles op i tre forskellige kategorier: <br>
         </p>
-        <h4 id="link2">Hvad bruges jQuery til?</h4>
+        <div style="margin-left: 10%;color: #38cd38;font-size: 0.8em">
+            <li>tags</li>
+            <li>classes</li>
+            <li>ids</li>
+        </div>
         <p>
-            Her forklares hvordan jQuery kan bruges til at lave en html side interaktiv og intuitiv.
+            <span>Tags</span> er html tags såsom: head, body, div, h1-h6, p, etc. - og kan bruges til at sørge for at alle elementer
+            af et givent tag får en række ekstra egenskaber.<br><br>
+            <span>Classes</span> er noget man kan tilføje til sine html tags, som kan sørge for at man selv kan bestemme hvilke
+            elementer, der skal have nogle ekstra egenskaber tilføjet på tværs af tags. Classes bliver markeret med et
+            <span>.</span> punktum foran, fx <span>".images"</span><br><br>
+            <span>Id'er</span> er også noget man kan tilføje til et html tag, men adskiller sig fra classes ved at de er unikke -
+            man kan altså ikke tilføje et id til flere end et element. Id's bliver markeret med et <span>#</span> hashtag foran, fx
+            <span>"#image"</span>.<br><br>
+            Gennem en af disse tre metoder, kan man bruge jQuery til at tilføje egenskaber til sine html-elementer - hvilket
+            gøres efter en html side er blevet loaded. <br><br>
+            Antallet af forskellige muligheder for særlige egenskaber er mange, men et par eksempler kan fx være at
+            gøre elementer usynlige ved forskellige events (fx ved at klikke på noget, pege på noget eller ved et tidsbestemt
+            timeout) - eller bruge input felter direkte til at tilføje noget til en database eller ændre noget på siden,
+            uden at skulle reloade hele siden.
         </p>
         <h4 id="link3">Eksempler på brug af jQuery</h4>
         <p>
