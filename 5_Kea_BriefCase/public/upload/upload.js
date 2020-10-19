@@ -1,11 +1,5 @@
+
 console.log('test');
-
-$('#currentYear').append(new Date().getFullYear());
-// eller
-// const footerCopyright = document.getElementById("currentYear");
-// const copyrightElement = document.createTextNode("ⓒ "+currentYear);
-
-// footerCopyright.appendChild(copyrightElement);
 
 function handleFormSubmitted () {
     const formMessage = document.getElementById("form-message").value;

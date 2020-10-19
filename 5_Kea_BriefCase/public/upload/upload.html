@@ -11,18 +11,20 @@
 <img src="/img/logo.jpg" alt="image" class="logo">
 <body>
 
-<form action="/form" method="post" onsubmit="validateForm()">
+<form action="/form" method="post" onsubmit="validateForm(); return false;">
     <textarea id="form-message" cols="50" rows="10" placeholder="Skriv din besked her.." name="message"></textarea>
     <br>
     <button id="form-submit1" onclick="handleFormSubmitted()">Get Done</button>
-    <button id="form-submit2" type="submit">Post Done</button>
+    <button id="form-submit2" type="submit" onclick="window.location.href='/about'">Post Done</button>
 </form>
 
 <p>Hi there</p>
 
 <!--Create a footer with copyright + year-->
 
-<footer id="footer"><span>Copyrightⓒ</span><span id="currentYear"></span><a href="/about"><button>About</button></a></footer>
 <script src="./upload/upload.js"></script>
+<footer id="footer">
+    <span>Copyrightⓒ</span><span id="currentYear"></span><a href="/about"><button>About</button></a>
+</footer>
 </body>
 </html>
