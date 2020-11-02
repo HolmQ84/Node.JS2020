@@ -1,15 +1,14 @@
-
 <h1>Upload</h1>
 
-<form id="form-upload">
-    <textarea id="form-message" cols="50" rows="10" placeholder="Skriv din besked her.." name="message"></textarea>
+<form id="form-upload" action="/form" method="post" onclick="validateForm(); return false;" >
+    <textarea id="form-message" cols="100" rows="10" name="message"></textarea>
     <br><br>
-    <input id="form-file" type="file" name="file" accept="*/*">
+    <input id="form-file" type="file" name="file">
     <br><br>
-    <button id="form-submit" type="submit" onclick="validateForm()">ValidateForm</button>
+    <button id="form-submit" type="submit">Done</button>
 </form>
 
+<script src="/upload/upload.js"></script>
 
-<!--Create a footer with copyright + year-->
-
-<script src="./upload/upload.js"></script>
+</body>
+</html>

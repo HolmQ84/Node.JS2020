@@ -1,4 +1,3 @@
-
 function validateForm() {
     const form = document.getElementById('form-upload');
     const formData = new FormData(form);
@@ -6,15 +5,15 @@ function validateForm() {
     fetch("/uploads", {
         method: "POST",
         // when setting the formData it will not work by setting the content-type
-        /*        headers: {
-                    "content-type": "application/json"
-                },*/
+/*        headers: {
+            "content-type": "application/json"
+        },*/
         body: formData
     })
-        .then(response => response.json())
-        .then(result => {
-            window.location.href = `/download/${result.id}`;
-        });
+    .then(response => response.json())
+    .then(result => {
+        window.location.href = `/download/${result.id}`;
+    });
 
 }
 
@@ -28,3 +27,4 @@ function validateForm() {
         console.log(response.data);
     });*!/
 }*/
+
