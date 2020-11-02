@@ -1,0 +1,11 @@
+{
+  "name": "2_note_authentication_system",
+  "version": "0.0.1",
+  "description": "An authentication system",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "MSH",
+  "license": "MIT"
+}
