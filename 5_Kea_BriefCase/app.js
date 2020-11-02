@@ -3,20 +3,24 @@ const app = express();
 
 app.use(express.static("public"));
 app.use(express.json());
-app.use(express.urlencoded({extended: true}));
+app.use(express.urlencoded({ extended: true }));
 
 const fs = require('fs');
+
 const headerPage = fs.readFileSync(__dirname+"/public/header/header.html").toString();
-const uploadPage = fs.readFileSync(__dirname+"/public/upload/upload.html").toString();
-const downloadPage = fs.readFileSync(__dirname+"/public/download/download.html").toString();
 const footerPage = fs.readFileSync(__dirname+"/public/footer/footer.html").toString();
+
+const uploadPage = fs.readFileSync(__dirname+"/public/upload/upload.html").toString();
+const aboutPage = fs.readFileSync(__dirname + "/public/about/about.html").toString();
+const downloadPage = fs.readFileSync(__dirname+"/public/download/download.html").toString();
+
 
 app.get("/", (req, res) => {
     res.send(headerPage+uploadPage+footerPage);
 })
 
 app.get("/about", (req, res) => {
-    res.sendFile(__dirname+"/public/about/about.html")
+    res.send(headerPage+aboutPage+footerPage)
 })
 
 app.get("/download/:id", (req, res) => {
