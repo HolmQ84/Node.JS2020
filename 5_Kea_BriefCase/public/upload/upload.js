@@ -1,24 +1,10 @@
-function handleFormSubmitted () {
-    const formMessage = document.getElementById("form-message").value;
-    console.log(formMessage);
-    $.get("/form?message="+formMessage, (response) => {
-        console.log(response);
-    });
-}
-
 function validateForm() {
-    const message = $('form-message').val();
-    const file = document.getElementById("form-file");
+    const form = document.getElementById('form-upload');
+    const formData = new FormData(form);
 
     fetch("/uploads", {
         method: 'POST',
-        headers: {
-            'content-type': "application/json"
-        },
-        body: JSON.stringify({
-            message,
-            file
-        })
+        body: formData
     })
     .then(response => response.json())
     .then(result => {
@@ -37,6 +23,16 @@ $('form-submit').submit(function() {
         console.log(response);
     });
 });
+
+function handleFormSubmitted () {
+    const formMessage = document.getElementById("form-message").value;
+    console.log(formMessage);
+    $.get("/form?message="+formMessage, (response) => {
+        console.log(response);
+    });
+}
+
+
 */
 
 // document.getElementById("form-submit").addEventListener("click", () =>{
