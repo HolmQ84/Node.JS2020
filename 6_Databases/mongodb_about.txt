@@ -18,3 +18,4 @@ use mongodb:
 - rapid prototype
 
 kan kombineres - mongodb til log
+
