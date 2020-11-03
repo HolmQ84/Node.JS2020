@@ -1,30 +1,39 @@
-
 function validateForm() {
     const form = document.getElementById('form-upload');
     const formData = new FormData(form);
-
     fetch("/uploads", {
-        method: "POST",
-        // when setting the formData it will not work by setting the content-type
-        /*        headers: {
-                    "content-type": "application/json"
-                },*/
+        method: 'POST',
         body: formData
     })
-        .then(response => response.json())
-        .then(result => {
-            window.location.href = `/download/${result.id}`;
-        });
-
+    .then(response => response.json())
+    .then(result => {
+        // window.location.href = `/download/${result.id}`;
+    });
 }
 
-/*function handleFormSubmitted() {
+/*
+$('form-submit').submit(function() {
     const formMessage = document.getElementById("form-message").value;
-/!*    $.ajax({
+    $.ajax({
         url: "/form",
         type: "POST",
         data: { formMessage }
     }).done((response) => {
-        console.log(response.data);
-    });*!/
-}*/
+        console.log(response);
+    });
+});
+
+function handleFormSubmitted () {
+    const formMessage = document.getElementById("form-message").value;
+    console.log(formMessage);
+    $.get("/form?message="+formMessage, (response) => {
+        console.log(response);
+    });
+}
+
+
+*/
+
+// document.getElementById("form-submit").addEventListener("click", () =>{
+//     console.log(document.getElementById("form-message").value);
+// })

@@ -1,0 +1,32 @@
+relationelle database
+---------------------
+mysql
+mssql
+oracle
+mariadb
+
+
+
+
+
+no-sql
+------
+
+
+
+document databases
+------------------
+mongodb
+
+
+graph databases
+---------------
+neo4j
+
+in-memory
+---------
+h2
+
+object
+------
+realm
