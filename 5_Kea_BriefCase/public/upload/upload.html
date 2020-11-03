@@ -1,11 +1,9 @@
 <h1>Upload</h1>
 
-<form id="form-upload" action="/form" method="post" onclick="validateForm(); return false;" >
-    <textarea id="form-message" cols="100" rows="10" name="message"></textarea>
+<form action="/form" method="post">
+    <textarea id="messageBoxSubmit" cols="100" rows="10" name="message"></textarea>
     <br><br>
-    <input id="form-file" type="file" name="file">
-    <br><br>
-    <button id="form-submit" type="submit">Done</button>
+    <button id="form-submit" type="submit" onclick="validateForm(); return false;">Done</button>
 </form>
 
 <script src="/upload/upload.js"></script>
