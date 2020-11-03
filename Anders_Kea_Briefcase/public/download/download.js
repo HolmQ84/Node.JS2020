@@ -7,3 +7,4 @@ fetch(`/uploads/${uploadId}`)
     .then(data => {
         $("#message").append(`<p>${data.data.message}</p>`);
     });
+
