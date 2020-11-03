@@ -27,8 +27,18 @@ app.get("/download/:id", (req, res) => {
     res.send(headerPage+downloadPage+footerPage);
 })
 
+app.get("/form", (req, res) => {
+    res.sendFile(__dirname+"/public/form/form.html");
+})
+
+app.post("/form", (req, res) => {
+    res.send(req.body);
+})
+
+/*
 const uploadRouter = require('./routes/upload.js')
 app.use(uploadRouter);
+*/
 
 const port = process.env.PORT || 8080;
 
@@ -37,4 +47,27 @@ app.listen(port, (error) => {
         console.log("Error starting the server :-(", error);
     }
     console.log("Server running on port", Number(port));
+});
+
+const crypto = require('crypto');
+
+const path = require('path');
+
+const uploads = [];
+
+app.get('/uploads/:id', (req, res) => {
+    const foundUpload = uploads.find(upload => upload.id === req.params.id);
+    return res.send({ data: foundUpload });
+})
+
+app.post('/uploads', (req, res) => {
+    const id = crypto.randomBytes(28).toString("hex");
+    console.log(req.body);
+    uploads.push({...req.body, id });
+    console.log(uploads)
+    return res.send({ id });
+});
+
+app.get("/uploads", (req, res) => {
+    res.sendFile(path.join(__dirname+"/../public/upload/upload.html"));
 });
