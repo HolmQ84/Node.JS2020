@@ -9,8 +9,6 @@ MongoClient.connect(connectionUrl, { useUnifiedTopology: true}, (error, client) 
 
     const favorites = memes.collection("favorites");
 
-    console.log(favorites);
-
     favorites.insertOne({template: "Hello there", person: "Obi Wan"}, (error, result) => {
         if (error) throw new Error(error);
         console.log(result);
