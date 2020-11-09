@@ -1,14 +1,19 @@
 function validateForm() {
-    const form = document.getElementById('form-upload');
-    const formData = new FormData(form);
+    const message = document.getElementById("messageBoxSubmit").value;
     fetch("/uploads", {
-        method: 'POST',
-        body: formData
+        method: "POST",
+        headers: {
+            "content-type": "application/json"
+        },
+        body: JSON.stringify({
+            message
+        })
     })
-    .then(response => response.json())
-    .then(result => {
-        // window.location.href = `/download/${result.id}`;
-    });
+        .then(res => res.json())
+        .then(res => { // Converts a stream to a new object, requires a .then()
+            window.location.href = `/download/${res.id}`
+        });
+    return true
 }
 
 /*
@@ -30,7 +35,6 @@ function handleFormSubmitted () {
         console.log(response);
     });
 }
-
 
 */
 

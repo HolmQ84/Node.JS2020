@@ -11,9 +11,7 @@ MongoClient.connect(connectionUrl, { useUnifiedTopology: true }, (error, client)
 
     favorites.find({ person: "Obi Wan" }).toArray((error, foundFavorites) => {
         if (error) throw new Error(error);
-
         console.log(foundFavorites);
         client.close();
-
     });
 });
