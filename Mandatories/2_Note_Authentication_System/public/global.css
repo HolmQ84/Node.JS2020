@@ -1,0 +1,19 @@
+#footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    padding: 10px
+}
+
+.logo {
+
+}
+
+body {
+    text-align: center;
+    background-color: royalblue;
+    font-family: Bahnschrift, serif;
+    color: white;
+}

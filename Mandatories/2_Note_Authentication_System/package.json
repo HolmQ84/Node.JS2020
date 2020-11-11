@@ -4,8 +4,21 @@
   "description": "An authentication system",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "devStart": "nodemon app.js",
+    "normalStart": "node app.js"
   },
   "author": "MSH",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "connect": "^3.7.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "mongodb": "^3.6.3",
+    "multer": "^1.4.2",
+    "serve-favicon": "^2.5.0"
+  }
 }
