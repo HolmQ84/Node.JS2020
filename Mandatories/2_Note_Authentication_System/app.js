@@ -2,11 +2,15 @@ const express = require('express');
 const app = express();
 
 const favicon = require('serve-favicon');
-app.use(favicon(__dirname + '/public/images/logo.ico'));
+app.use(favicon(__dirname + '/public/images/logo/logo.ico'));
 
 app.use(express.static("public"));
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
+
+
+const multer  = require('multer')
+const file_upload = multer({ dest: '/public/images/memes/' })
 
 // Connecting to the database.
 const MongoClient = require("mongodb").MongoClient
@@ -31,6 +35,11 @@ app.get('/upload', (req, res) => {
     res.send( header + upload + footer );
 })
 
+app.post('/upload', file_upload.single('upFile'), (req, res, next) => {
+    // req.file is the `upFile` file
+    // req.body will hold the text fields, if there were any.
+})
+
 app.get('/memes', (req,res) => {
     res.send(header + memes + footer );
 })
@@ -45,5 +54,5 @@ app.listen(port, (error) => {
     if (error) {
         console.log("Fejl ved opstart af server.");
     }
-    console.log("Server startet på port: ", port);
+    console.log("Server startet på port:",port);
 })
