@@ -42,4 +42,3 @@ app.get("/documentation", (req, res) => {
 app.get("/documentation2", (req, res) => {
     return res.sendFile(__dirname + '/documentation2.html');
 });
-
