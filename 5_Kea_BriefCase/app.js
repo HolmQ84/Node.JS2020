@@ -1,6 +1,9 @@
 const express = require('express');
 const app = express();
 
+
+
+
 app.use(express.static("public"));
 app.use(express.json()); // The next two lines is to make sure that post works
 app.use(express.urlencoded({extended: true})) // This is so that we can use url in upload.js

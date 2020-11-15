@@ -13,21 +13,24 @@ app.use(express.urlencoded({extended: true}));
 const multer  = require('multer')
 const path = require('path')
 
+let memeCounter = 6
+
 const storage = multer.diskStorage({
     destination: function(req, file, cb) {
         cb(null, 'public/images/memes');
     },
     // By default, multer removes file extensions so let's add them back
     filename: function(req, file, cb) {
-        cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname));
+        cb(null, 'meme-' + memeCounter + path.extname(file.originalname));
+        memeCounter += 1;
     }
 });
 
 const imageFilter = function(req, file, cb) {
     // Accept images only
-    if (!file.originalname.match(/\.(jpg|JPG|jpeg|JPEG|png|PNG|gif|GIF)$/)) {
+    if (!file.originalname.match(/\.(jpg|JPG)$/)) {
         req.fileValidationError = 'Only image files are allowed!';
-        return cb(new Error('Only image files are allowed!'), false);
+        return cb(new Error('Only jpg image files are allowed!'), false);
     }
     cb(null, true);
 };
@@ -86,6 +89,12 @@ app.post('/upload', (req, res) => {
 app.get('/upload/success', (req, res) => {
     res.send( header + success + footer)
 })
+
+module.exports.readFiles = function readDir() {
+    fs.readdir( 'public/images/memes', (error, files) => {
+        return files.length;
+    });
+}
 
 app.get('/memes', (req,res) => {
     res.send(header + memes + footer );
