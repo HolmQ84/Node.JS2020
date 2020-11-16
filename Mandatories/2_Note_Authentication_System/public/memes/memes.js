@@ -1,5 +1,4 @@
-// const app = require('../../app.js')
-// let totalfiles = app.readFiles();
+const express = require('express');
 
 // TODO import app.js function (readFiles) to this js file.
 
