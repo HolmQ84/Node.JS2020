@@ -1,0 +1,1 @@
+- Implementer readDir metode i memes/memes.js

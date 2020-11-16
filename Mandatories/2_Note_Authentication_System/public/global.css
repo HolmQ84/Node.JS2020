@@ -7,13 +7,15 @@
     padding: 10px
 }
 
-.logo {
-
-}
-
 body {
     text-align: center;
     background-color: royalblue;
     font-family: Bahnschrift, serif;
     color: white;
+}
+
+button {
+    background-color: lightskyblue;
+    color: black;
+    border-radius: 5px;
 }
