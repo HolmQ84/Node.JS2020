@@ -14,6 +14,22 @@ app.use(session({
     cookie: { secure: false }
 }))
 
+const rateLimiter = require('express-rate-limit');
+
+const authLimiter1 = rateLimiter({
+    windowMs: 10 * 60 * 1000,   // 10 minutes.
+    max: 6   // Limit each IP to 6 requests per windowMs.
+});
+
+const authLimiter2 = rateLimiter({
+    windowMs: 15 * 60 * 1000,   // 15 minutes.
+    max: 50   // Limit each IP to 50 requests per windowMs.
+});
+
+app.use("/auth", authLimiter1);
+
+app.use(authLimiter2);
+
 const auth_routes = require('./routes/authentication.js');
 const auth_pages = require('./routes/auth_pages.js');
 const session_routes = require('./routes/session.js');
