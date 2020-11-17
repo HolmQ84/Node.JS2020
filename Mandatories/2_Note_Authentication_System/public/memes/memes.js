@@ -5,10 +5,6 @@
 
 let totalfiles = 11;
 
-console.log(totalfiles)
-
-const dir = '../public/images/memes/';
-
 const url = '../images/memes/meme-';
 
 for (let i = 1;i<=totalfiles;i++) {

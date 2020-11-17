@@ -13,7 +13,11 @@ const footer = fs.readFileSync(__dirname + "/../public/footer/footer.html").toSt
 const success = fs.readFileSync(__dirname + "/../public/success/success.html").toString();
 const upload = fs.readFileSync(__dirname + "/../public/upload/upload.html").toString();
 
-latestImage = 'hej';
+let latestImage = 'hej';
+
+function getLastImage() {
+    return latestImage;
+}
 
 // Counter for constructing filenames for new memes.
 let memeCounter = 12;

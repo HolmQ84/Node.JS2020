@@ -27,7 +27,7 @@ app.use(session({
 }))
 
 // Function for counting number of files in images/memes folder.
-app.locals.readDir = function readDir() {
+function readDir() {
     fs.readdir( 'public/images/memes', (error, files) => {
         return files.length;
     });

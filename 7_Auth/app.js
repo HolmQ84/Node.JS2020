@@ -63,6 +63,16 @@ app.get("/*", (req, res) => {
     return res.status(501).send({ data: "Could not find the page." });
 })
 
+/*
+200 - ok
+4xx
+401 - unauthorized
+403 - forbidden
+5xx
+500 - internal server error
+501 - Not implemented yet
+ */
+
 const port = process.env.PORT || 8080;
 
 app.listen(port, (error) => {

@@ -1,0 +1,12 @@
+{
+  "name": "1_Google_Cloud",
+  "version": "1.0.0",
+  "description": "A example of how to store and retrieve data files from Google Cloud Storage",
+  "main": "app.js",
+  "scripts": {
+    "devStart": "nodemon app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT"
+}
