@@ -4,9 +4,16 @@ const bcrypt = require('bcrypt');
 const saltRounds = 12;
 
 const plainTextPassword = "#flotfyr36.jatak";
+const hashedPassword = "$2b$12$szY7U0CHO3l27RTJMDq6L.L6TN7qbzePKYpSVcb5QzJVeXhKw23ZS";
 
+// How to hash a password.
 bcrypt.hash(plainTextPassword, saltRounds, (error, hash) => {
     console.log(hash);
+})
+
+// How to autherize a password.
+bcrypt.compare(plainTextPassword, hashedPassword, (error, result) => {
+    console.log(result);
 })
 
 router.get('/auth/register', (req, res) => {
