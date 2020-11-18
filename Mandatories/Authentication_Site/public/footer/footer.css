@@ -1,0 +1,9 @@
+.barLeft {
+    float: left;
+}
+.barRight {
+    float: right;
+}
+.bar {
+    font-size: 0.9em;
+}

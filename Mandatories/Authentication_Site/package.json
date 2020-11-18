@@ -1,0 +1,24 @@
+{
+  "name": "authentication_site",
+  "version": "1.0.0",
+  "description": "A website with authentication and image uploads",
+  "main": "app.js",
+  "scripts": {
+    "devStart": "nodemon app.js",
+    "normalStart": "node app.js"
+  },
+  "author": "MSH",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "fs": "0.0.1-security",
+    "mongodb": "^3.6.3",
+    "multer": "^1.4.2",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}

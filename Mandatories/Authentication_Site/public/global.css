@@ -1,0 +1,21 @@
+#footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    padding: 10px
+}
+
+body {
+    text-align: center;
+    background-color: royalblue;
+    font-family: Bahnschrift, serif;
+    color: white;
+}
+
+button {
+    background-color: lightskyblue;
+    color: black;
+    border-radius: 5px;
+}
