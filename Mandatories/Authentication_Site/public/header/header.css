@@ -7,3 +7,11 @@
 .navRight {
     float: right;
 }
+
+.navbar {
+    opacity: 80%;
+}
+
+.nav-item .active {
+    color: white;
+}

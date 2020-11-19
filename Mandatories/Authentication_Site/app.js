@@ -32,12 +32,15 @@ const footer = fs.readFileSync(__dirname + "/public/footer/footer.html").toStrin
 
 // Making variables for entry points.
 const index = fs.readFileSync(__dirname + "/public/index/index.html").toString();
+const login = fs.readFileSync(__dirname + "/public/login/login.html").toString();
 
 app.get('/', (req, res) => {
     res.send(header+index+footer);
 })
 
-
+app.get('/login', (req, res) => {
+    res.send(header+login+footer);
+})
 
 
 

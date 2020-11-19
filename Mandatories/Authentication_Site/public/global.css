@@ -8,14 +8,19 @@
 }
 
 body {
-    text-align: center;
-    background-color: royalblue;
+    background-size: 100% 100%;
+    background-image: url('./_files/images/wallpaper.jpg');
+    background-attachment: fixed;
     font-family: Bahnschrift, serif;
-    color: white;
+    text-align: center;
 }
 
 button {
     background-color: lightskyblue;
     color: black;
     border-radius: 5px;
+}
+
+h1 {
+    color: white;
 }
