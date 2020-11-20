@@ -15,12 +15,12 @@ require('dotenv').config();
 const session = require("express-session");
 
 // Used for collecting session cookies to store user info through different pages.
-app.use(session({
-    secret: process.env.SESSION_SECRET,
-    resave: false,      // Skal den re-sende session oplysninger ved nye routes?
-    saveUninitialized: true,
-    cookie: { secure: false }
-}))
+// app.use(session({
+//     secret: process.env.SESSION_SECRET,
+//     resave: false,      // Skal den re-sende session oplysninger ved nye routes?
+//     saveUninitialized: true,
+//     cookie: { secure: false }
+// }))
 
 // Connecting to the database.
 const MongoClient = require("mongodb").MongoClient;
@@ -32,19 +32,35 @@ const footer = fs.readFileSync(__dirname + "/public/footer/footer.html").toStrin
 
 // Making variables for entry points.
 const index = fs.readFileSync(__dirname + "/public/index/index.html").toString();
-const login = fs.readFileSync(__dirname + "/public/login/login.html").toString();
+const database = fs.readFileSync(__dirname + "/public/database_test/database.html").toString();
+
+app.set('view engine', 'html');
 
 app.get('/', (req, res) => {
     res.send(header+index+footer);
 })
 
-app.get('/login', (req, res) => {
-    res.send(header+login+footer);
+app.get('/database', (req, res) => {
+    MongoClient.connect(connectionUrl, { useUnifiedTopology: true }, (error, client) => {
+        if (error) throw new Error(error);
+
+        const memes = client.db("memes");
+
+        const favorites = memes.collection("favorites");
+
+        favorites.find({ person: "Obi Wan" }).toArray((error, foundFavorites) => {
+            if (error) throw new Error(error);
+            client.close();
+            res.send({
+                data: foundFavorites
+            });
+        })
+    });
 })
 
-
-
-
+app.get('/show', (req, res) => {
+    res.send(header+database+footer);
+})
 
 
 const port = process.env.PORT || 8080;
