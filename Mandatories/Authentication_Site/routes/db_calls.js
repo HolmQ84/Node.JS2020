@@ -1,10 +1,10 @@
-const MongoClient = require('mongodb').MongoClient
+const router = require('express').Router();
 
+const path = require('path')
+const MongoClient = require("mongodb");
 const connectionUrl = "mongodb://localhost:27017/";
 
-user_data = "Ingen data";
-
-function readDB() {
+router.post('/database/get', (req, res) => {
     MongoClient.connect(connectionUrl, { useUnifiedTopology: true }, (error, client) => {
         if (error) throw new Error(error);
 
@@ -14,10 +14,17 @@ function readDB() {
 
         favorites.find({ person: "Obi Wan" }).toArray((error, foundFavorites) => {
             if (error) throw new Error(error);
-            console.log(foundFavorites);
             client.close();
+            res.send({
+                data: foundFavorites
+            });
         })
     });
-}
+})
 
-readDB();
+router.get('/database/get', (req, res) => {
+    res.sendFile(path.join(__dirname+'/../index.html'));
+})
+
+module.exports = router;
+

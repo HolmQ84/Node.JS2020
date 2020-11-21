@@ -1,5 +1,4 @@
 
-
 function getUploads() {
     fetch('/database')
         .then(result => result.json())
